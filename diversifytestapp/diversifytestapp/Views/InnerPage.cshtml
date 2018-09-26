@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+
+@{
+    Layout = "DiversifyMasterPage.cshtml";
+}
+
+@* the fun starts here *@
+
+
+<div class="wrapper">
+
+    @{
+        var children = Model.Content.Children.Where("Visible");
+    }
+
+    @foreach (var child in children)
+    {
+       
+        var partialView = "/Views/Partials/" + child.DocumentTypeAlias + ".cshtml";
+        @Html.Partial((string)partialView, (IPublishedContent)child)
+    }
+
+
+</div>

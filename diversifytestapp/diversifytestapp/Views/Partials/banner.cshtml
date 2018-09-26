@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@using Newtonsoft.Json.Linq
+
+
+@if (Model.Content.HasValue("imageBanner"))
+{
+
+
+    var typedMediaPickerSingle = Model.Content.GetPropertyValue<IPublishedContent>("imageBanner");
+    if (typedMediaPickerSingle != null)
+    {
+        @*<p>@typedMediaPickerSingle.Url</p>
+            <img src="@typedMediaPickerSingle.Url" style="width:200px" alt="@typedMediaPickerSingle.GetPropertyValue("alt")" />*@
+
+
+
+        <div class="page-header page-header-small">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('@typedMediaPickerSingle.Url');">
+            </div>
+            <div class="content-center">
+                <div class="container">
+                    <h1 class="title">
+                        @if (Model.Content.HasValue("title"))
+                        { @Model.Content.GetPropertyValue("title"); }
+                    </h1>
+                    <div class="text-center">
+                        @if (Model.Content.HasValue("multiLinkSection"))
+                        {
+                            foreach (var link in Model.Content.GetPropertyValue<JArray>("multiLinkSection"))
+                            {
+                                var caption = link.Value<string>("caption");
+                                var linkUrl = link.Value<string>("link");
+                                var linkTarget = link.Value<bool>("newWindow") ? "_blank" : null;
+
+
+                                <a href="@linkUrl" target="@linkTarget" class="btn btn-xs btn-warning">@caption.ToUpper()</a>
+                            }
+
+                        }
+                        
+                    </div>
+                </div >
+            </div >
+        </div >
+
+
+    }
+
+}

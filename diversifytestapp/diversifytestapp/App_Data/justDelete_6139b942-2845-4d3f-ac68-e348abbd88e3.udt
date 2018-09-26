@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocumentType>
+  <Info>
+    <Name>Two rows three columns</Name>
+    <Alias>twoRowsThreeColumns</Alias>
+    <Icon>icon-columns color-green</Icon>
+    <Thumbnail>folder.png</Thumbnail>
+    <Description>This page have two rows with an Image banner and a three-column content. The three-column content component can display images and texts in any order.</Description>
+    <AllowAtRoot>False</AllowAtRoot>
+    <IsListView>False</IsListView>
+    <Compositions />
+    <AllowedTemplates>
+      <Template>TwoRowsThreeColumns</Template>
+    </AllowedTemplates>
+    <DefaultTemplate>TwoRowsThreeColumns</DefaultTemplate>
+  </Info>
+  <Structure />
+  <GenericProperties>
+    <GenericProperty>
+      <Name>Section 2 Image</Name>
+      <Alias>section2Image</Alias>
+      <Type>Umbraco.MediaPicker2</Type>
+      <Definition>135d60e0-64d9-49ed-ab08-893c9ba44ae5</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>3</SortOrder>
+      <Mandatory>False</Mandatory>
+      <Description><![CDATA[Optional]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Image Banner</Name>
+      <Alias>imageBanner</Alias>
+      <Type>Umbraco.MediaPicker2</Type>
+      <Definition>135d60e0-64d9-49ed-ab08-893c9ba44ae5</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>0</SortOrder>
+      <Mandatory>True</Mandatory>
+      <Description><![CDATA[Required Image]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Section 3 Image</Name>
+      <Alias>section3Image</Alias>
+      <Type>Umbraco.MediaPicker2</Type>
+      <Definition>135d60e0-64d9-49ed-ab08-893c9ba44ae5</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>5</SortOrder>
+      <Mandatory>False</Mandatory>
+      <Description><![CDATA[Optional]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Section 3 Copy</Name>
+      <Alias>section3Copy</Alias>
+      <Type>Umbraco.Textbox</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>6</SortOrder>
+      <Mandatory>False</Mandatory>
+      <Description><![CDATA[Optional]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Section 1 Image</Name>
+      <Alias>section1Image</Alias>
+      <Type>Umbraco.MediaPicker2</Type>
+      <Definition>135d60e0-64d9-49ed-ab08-893c9ba44ae5</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>1</SortOrder>
+      <Mandatory>False</Mandatory>
+      <Description><![CDATA[Optional]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Section 1 Copy</Name>
+      <Alias>section1Copy</Alias>
+      <Type>Umbraco.Textbox</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>2</SortOrder>
+      <Mandatory>False</Mandatory>
+      <Description><![CDATA[Optional]]></Description>
+    </GenericProperty>
+    <GenericProperty>
+      <Name>Section 2 Copy</Name>
+      <Alias>section2Copy</Alias>
+      <Type>Umbraco.Textbox</Type>
+      <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>4</SortOrder>
+      <Mandatory>False</Mandatory>
+      <Description><![CDATA[Optional]]></Description>
+    </GenericProperty>
+  </GenericProperties>
+  <Tabs>
+    <Tab>
+      <Id>12</Id>
+      <Caption>Content</Caption>
+      <SortOrder>0</SortOrder>
+    </Tab>
+  </Tabs>
+</DocumentType>

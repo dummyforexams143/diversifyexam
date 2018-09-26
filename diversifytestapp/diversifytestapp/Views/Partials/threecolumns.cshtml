@@ -1,0 +1,95 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<div class="row">
+              <div class="col-md-8 ml-auto mr-auto text-center"  style="padding-top: 100px">
+                  
+                  <div class="row">
+                      
+                      
+                        <div class="col-md-4">
+                  
+                            <h5 class="description">
+                                            @{
+                                                if (Model.Content.HasValue("photo1"))
+                                                {
+                                                    var typedMediaPickerSingle = Model.Content.GetPropertyValue<IPublishedContent>("photo1");
+                                                    if (typedMediaPickerSingle != null)
+                                                    {
+                                                    <img src='@typedMediaPickerSingle.Url' class="img-responsive" style="width:100%">
+                                                    }
+                                                
+                                                    
+                                                }else{
+                                                    if (Model.Content.HasValue("copy1"))
+                                                    {
+                                                        var copy1 = Model.Content.GetPropertyValue("copy1");
+                                                        @Html.Raw(copy1)
+                                                    }
+                                                
+                                                }
+                                            }
+                            </h5>
+                        
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="col-md-4">
+                  
+                            <h5 class="description">
+                                            @{
+                                                if (Model.Content.HasValue("photo2"))
+                                                {
+                                                    var typedMediaPickerSingle = Model.Content.GetPropertyValue<IPublishedContent>("photo2");
+                                                    if (typedMediaPickerSingle != null)
+                                                    {
+                                                    <img src='@typedMediaPickerSingle.Url' class="img-responsive" style="width:100%">
+                                                    }
+                                                
+                                                    
+                                                }else{
+                                                    if (Model.Content.HasValue("copy2"))
+                                                    {
+                                                        var copy1 = Model.Content.GetPropertyValue("copy2");
+                                                        @Html.Raw(copy1)
+                                                    }
+                                                
+                                                }
+                                            }
+                            </h5>
+                        
+                        </div>
+                        
+                        <div class="col-md-4">
+                  
+                            <h5 class="description">
+                                            @{
+                                                if (Model.Content.HasValue("photo3"))
+                                                {
+                                                    var typedMediaPickerSingle = Model.Content.GetPropertyValue<IPublishedContent>("photo3");
+                                                    if (typedMediaPickerSingle != null)
+                                                    {
+                                                    <img src='@typedMediaPickerSingle.Url' class="img-responsive" style="width:100%">
+                                                    }
+                                                
+                                                    
+                                                }else{
+                                                    if (Model.Content.HasValue("copy3"))
+                                                    {
+                                                        var copy1 = Model.Content.GetPropertyValue("copy3");
+                                                        @Html.Raw(copy1)
+                                                    }
+                                                
+                                                }
+                                            }
+                            </h5>
+                        
+                        </div>
+                
+                    </div>
+                
+                
+          </div>
+</div>
